@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.1 on win32)" generated="2024-12-23T16:38:07.402946" rpa="false" schemaversion="5">
+<suite id="s1" name="Tc1" source="C:\Users\flogin\PycharmProjects\FirstRobotProject\tests\Tc1.robot">
+<kw name="LaucnhBrowser" owner="custom_keywords" type="SETUP">
+<kw name="Get Driver" owner="webdriver">
+<msg time="2024-12-23T16:38:09.000788" level="INFO">====== WebDriver manager ======</msg>
+<msg time="2024-12-23T16:38:12.468941" level="INFO">Get LATEST chromedriver version for google-chrome</msg>
+<msg time="2024-12-23T16:38:12.655379" level="INFO">Get LATEST chromedriver version for google-chrome</msg>
+<msg time="2024-12-23T16:38:12.808252" level="INFO">Driver [C:\Users\flogin\.wdm\drivers\chromedriver\win64\131.0.6778.204\chromedriver-win32/chromedriver.exe] found in cache</msg>
+<msg time="2024-12-23T16:38:12.808599" level="INFO">${driver} = C:\Users\flogin\.wdm\drivers\chromedriver\win64\131.0.6778.204\chromedriver-win32/chromedriver.exe</msg>
+<var>${driver}</var>
+<arg>${browser}</arg>
+<doc>Driver</doc>
+<status status="PASS" start="2024-12-23T16:38:09.000393" elapsed="3.808249"/>
+</kw>
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-12-23T16:38:12.809253" level="INFO">Opening browser 'chrome' to base url 'https://www.demoblaze.com/'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<arg>executable_path=${driver}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-12-23T16:38:12.808911" elapsed="6.692762"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-12-23T16:38:19.502149" elapsed="0.268472"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2024-12-23T16:38:19.770980" elapsed="0.008548"/>
+</kw>
+<arg>${browser}</arg>
+<arg>${url}</arg>
+<status status="PASS" start="2024-12-23T16:38:08.998815" elapsed="10.781140"/>
+</kw>
+<test id="s1-t1" name="FirstTestCase using NumberOfItems 15, phoneName HTC One M9, phoneId 7, phonePrice 700, phoneDescription The HTC One M9 is powered by 1.5GHz octa-core Qualcomm Snapdragon 810 processor and it comes with 3GB of RAM. The phone packs 32GB of internal storage that can be expanded up to 128GB via a microSD card." line="20">
+<kw name="GoToUrl" owner="custom_keywords" type="SETUP">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-12-23T16:38:19.790201" level="INFO">Opening url 'https://www.demoblaze.com/'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-12-23T16:38:19.789924" elapsed="0.173753"/>
+</kw>
+<arg>${url}</arg>
+<status status="PASS" start="2024-12-23T16:38:19.789033" elapsed="0.174987"/>
+</kw>
+<kw name="FirstTestCase using NumberOfItems, phoneName, phoneId, phonePrice, phoneDescription">
+<kw name="Wait Until Page is Fully Loaded" owner="homepage_keywords">
+<kw name="Wait For Elements To Be Present" owner="custom_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-12-23T16:38:20.184299" level="INFO">Element '//*' is displayed.</msg>
+<arg>${xpath}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-12-23T16:38:19.972872" elapsed="0.211606"/>
+</kw>
+<arg>10s</arg>
+<arg>1s</arg>
+<arg>Element Should Be Visible</arg>
+<arg>${xpath}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-12-23T16:38:19.972327" elapsed="0.212330"/>
+</kw>
+<arg>//*</arg>
+<status status="PASS" start="2024-12-23T16:38:19.971764" elapsed="0.213095"/>
+</kw>
+<status status="PASS" start="2024-12-23T16:38:19.971201" elapsed="0.213813"/>
+</kw>
+<kw name="Get HomePage items Count" owner="homepage_keywords">
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-12-23T16:38:20.282904" level="INFO">${count} = 9</msg>
+<var>${count}</var>
+<arg>${items}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-12-23T16:38:20.185965" elapsed="0.097062"/>
+</kw>
+<return>
+<value>${count}</value>
+<status status="PASS" start="2024-12-23T16:38:20.283247" elapsed="0.000128"/>
+</return>
+<msg time="2024-12-23T16:38:20.283725" level="INFO">${HomePageItemsCount} = 9</msg>
+<var>${HomePageItemsCount}</var>
+<status status="PASS" start="2024-12-23T16:38:20.185389" elapsed="0.098439"/>
+</kw>
+<kw name="Click Next" owner="homepage_keywords">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-12-23T16:38:20.285187" level="INFO">Clicking button 'xpath://button[@id='next2']'.</msg>
+<arg>${next_btn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-23T16:38:20.284779" elapsed="0.597186"/>
+</kw>
+<status status="PASS" start="2024-12-23T16:38:20.284219" elapsed="0.597942"/>
+</kw>
+<kw name="Wait Until The Next Is Invisible" owner="homepage_keywords">
+<kw name="Wait For Element Not To Be Present" owner="custom_keywords">
+<kw name="Wait Until Keyword Succeeds" owner="BuiltIn">
+<kw name="Element Should Not Be Visible" owner="SeleniumLibrary">
+<msg time="2024-12-23T16:38:21.359605" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-12-23T16:38:21.360076" level="FAIL">The element 'xpath://button[@id='next2']' should not be visible, but it is.</msg>
+<arg>${xpath}</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<status status="FAIL" start="2024-12-23T16:38:20.884726" elapsed="0.484484">The element 'xpath://button[@id='next2']' should not be visible, but it is.</status>
+</kw>
+<kw name="Element Should Not Be Visible" owner="SeleniumLibrary">
+<msg time="2024-12-23T16:38:22.397727" level="INFO">Element 'xpath://button[@id='next2']' exists but is not displayed.</msg>
+<arg>${xpath}</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<status status="PASS" start="2024-12-23T16:38:22.370278" elapsed="0.027651"/>
+</kw>
+<arg>15s</arg>
+<arg>1s</arg>
+<arg>Element Should Not Be Visible</arg>
+<arg>${xpath}</arg>
+<doc>Runs the specified keyword and retries if it fails.</doc>
+<status status="PASS" start="2024-12-23T16:38:20.884063" elapsed="1.514059"/>
+</kw>
+<arg>${next_btn}</arg>
+<status status="PASS" start="2024-12-23T16:38:20.883047" elapsed="1.515289"/>
+</kw>
+<status status="PASS" start="2024-12-23T16:38:20.882441" elapsed="1.516034"/>
+</kw>
+<kw name="Get HomePage items Count" owner="homepage_keywords">
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<msg time="2024-12-23T16:38:22.413412" level="INFO">${count} = 6</msg>
+<var>${count}</var>
+<arg>${items}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-12-23T16:38:22.399483" elapsed="0.014025"/>
+</kw>
+<return>
+<value>${count}</value>
+<status status="PASS" start="2024-12-23T16:38:22.413682" elapsed="0.000125"/>
+</return>
+<msg time="2024-12-23T16:38:22.414238" level="INFO">${NextPageItemsCount} = 6</msg>
+<var>${NextPageItemsCount}</var>
+<status status="PASS" start="2024-12-23T16:38:22.398891" elapsed="0.015425"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-12-23T16:38:22.415154" level="INFO">${TotalNumberOfItems} = 15</msg>
+<var>${TotalNumberOfItems}</var>
+<arg>${HomePageItemsCount} + ${NextPageItemsCount}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-12-23T16:38:22.414607" elapsed="0.000614"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-12-23T16:38:22.415983" level="INFO">${NumberOfItems_integer} = 15</msg>
+<var>${NumberOfItems_integer}</var>
+<arg>int(${NumberOfItems})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-12-23T16:38:22.415507" elapsed="0.000537"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${TotalNumberOfItems}</arg>
+<arg>${NumberOfItems_integer}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-12-23T16:38:22.416566" elapsed="0.000485"/>
+</kw>
+<kw name="Navigate To Phones" owner="homepage_keywords">
+<kw name="Click Link" owner="SeleniumLibrary">
+<msg time="2024-12-23T16:38:22.418226" level="INFO">Clicking link 'xpath://a[@id='itemc' and text()='Phones']'.</msg>
+<arg>${phones_hyperlink}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-23T16:38:22.417873" elapsed="0.151962"/>
+</kw>
+<kw name="Validate Current Url" owner="custom_keywords">
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-12-23T16:38:22.586046" level="INFO">${current_url} = https://www.demoblaze.com/#</msg>
+<var>${current_url}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-12-23T16:38:22.571125" elapsed="0.014997"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${current_url}</arg>
+<arg>${expected_url}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-12-23T16:38:22.586402" elapsed="0.000433"/>
+</kw>
+<arg>${phones_url}</arg>
+<status status="PASS" start="2024-12-23T16:38:22.570276" elapsed="0.016724"/>
+</kw>
+<status status="PASS" start="2024-12-23T16:38:22.417386" elapsed="0.169739"/>
+</kw>
+<kw name="Select a Phone By Name" owner="homepage_keywords">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-12-23T16:38:22.588414" level="INFO">${xpath} = xpath://a[contains(text(),'HTC One M9')]</msg>
+<var>${xpath}</var>
+<arg>xpath://a[contains(text(),'${phoneName}')]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-12-23T16:38:22.588069" elapsed="0.000406"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-12-23T16:38:22.589120" level="INFO">Clicking element 'xpath://a[contains(text(),'HTC One M9')]'.</msg>
+<arg>${xpath}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-23T16:38:22.588770" elapsed="1.043696"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-12-23T16:38:23.633532" level="INFO">${phonePageUrl} = https://www.demoblaze.com/prod.html?idp_=7</msg>
+<var>${phonePageUrl}</var>
+<arg>https://www.demoblaze.com/prod.html?idp_=${index}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-12-23T16:38:23.633013" elapsed="0.000587"/>
+</kw>
+<kw name="Validate Current Url" owner="custom_keywords">
+<kw name="Get Location" owner="SeleniumLibrary">
+<msg time="2024-12-23T16:38:23.710659" level="INFO">${current_url} = https://www.demoblaze.com/prod.html?idp_=7</msg>
+<var>${current_url}</var>
+<doc>Returns the current browser window URL.</doc>
+<status status="PASS" start="2024-12-23T16:38:23.634854" elapsed="0.075907"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${current_url}</arg>
+<arg>${expected_url}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-12-23T16:38:23.711090" elapsed="0.000498"/>
+</kw>
+<arg>${phonePageUrl}</arg>
+<status status="PASS" start="2024-12-23T16:38:23.634063" elapsed="0.077711"/>
+</kw>
+<arg>${phoneName}</arg>
+<arg>${phoneId}</arg>
+<status status="PASS" start="2024-12-23T16:38:22.587409" elapsed="1.124518"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-12-23T16:38:23.712762" level="INFO">${expected_price_integer} = 700</msg>
+<var>${expected_price_integer}</var>
+<arg>int(${phonePrice})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-12-23T16:38:23.712206" elapsed="0.000625"/>
+</kw>
+<kw name="Check The Price Of The Phone" owner="phonePage_keywords">
+<kw name="Get The Price Of The Phone" owner="phonePage_keywords">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-12-23T16:38:24.080837" level="INFO">${price_text} = $700 *includes tax</msg>
+<var>${price_text}</var>
+<arg>${price}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-23T16:38:23.714396" elapsed="0.366546"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-12-23T16:38:24.082369" level="INFO">${price_value} = 700</msg>
+<var>${price_value}</var>
+<arg>re.sub(r'[^0-9]', '', '''${price_text}''')</arg>
+<arg>modules=re</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-12-23T16:38:24.081330" elapsed="0.001125"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2024-12-23T16:38:24.084000" level="INFO">${price_number} = 700</msg>
+<var>${price_number}</var>
+<arg>int(${price_value})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2024-12-23T16:38:24.083053" elapsed="0.001075"/>
+</kw>
+<return>
+<value>${price_number}</value>
+<status status="PASS" start="2024-12-23T16:38:24.084490" elapsed="0.000125"/>
+</return>
+<msg time="2024-12-23T16:38:24.084975" level="INFO">${price} = 700</msg>
+<var>${price}</var>
+<status status="PASS" start="2024-12-23T16:38:23.713912" elapsed="0.371123"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${price}</arg>
+<arg>${expected_price}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-12-23T16:38:24.085381" elapsed="0.000419"/>
+</kw>
+<arg>${expected_price_integer}</arg>
+<status status="PASS" start="2024-12-23T16:38:23.713185" elapsed="0.372782"/>
+</kw>
+<kw name="Check The Description Of The Phone" owner="phonePage_keywords">
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-12-23T16:38:24.123646" level="INFO">${actual_Description} = The HTC One M9 is powered by 1.5GHz octa-core Qualcomm Snapdragon 810 processor and it comes with 3GB of RAM. The phone packs 32GB of internal storage that can be expanded up to 128GB via a microSD ca...</msg>
+<var>${actual_Description}</var>
+<arg>${phone_description}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-12-23T16:38:24.086885" elapsed="0.036846"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${actual_Description}</arg>
+<arg>${expected_Description}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-12-23T16:38:24.124113" elapsed="0.000470"/>
+</kw>
+<arg>${phoneDescription}</arg>
+<status status="PASS" start="2024-12-23T16:38:24.086270" elapsed="0.038498"/>
+</kw>
+<arg>NumberOfItems=15</arg>
+<arg>phoneName=HTC One M9</arg>
+<arg>phoneId=7</arg>
+<arg>phonePrice=700</arg>
+<arg>phoneDescription=The HTC One M9 is powered by 1.5GHz octa-core Qualcomm Snapdragon 810 processor and it comes with 3GB of RAM. The phone packs 32GB of internal storage that can be expanded up to 128GB via a microSD card.</arg>
+<status status="PASS" start="2024-12-23T16:38:19.970373" elapsed="4.154764"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn" type="TEARDOWN">
+<arg>End of Testcase</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2024-12-23T16:38:24.126194" elapsed="0.000770"/>
+</kw>
+<status status="PASS" start="2024-12-23T16:38:19.780389" elapsed="4.346973"/>
+</test>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2024-12-23T16:38:24.128691" elapsed="3.403873"/>
+</kw>
+<status status="PASS" start="2024-12-23T16:38:07.405694" elapsed="20.126989"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Tc1">Tc1</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-12-23T16:38:08.939332" level="WARN">Error in file 'C:\Users\flogin\PycharmProjects\FirstRobotProject\resources\keywords\homepage_keywords.robot' on line 11: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+<msg time="2024-12-23T16:38:08.949840" level="WARN">Error in file 'C:\Users\flogin\PycharmProjects\FirstRobotProject\resources\keywords\phonePage_keywords.robot' on line 10: The '[Return]' setting is deprecated. Use the 'RETURN' statement instead.</msg>
+</errors>
+</robot>
